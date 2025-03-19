@@ -1,60 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="./build/css/style.css" />
+		<title>Workoutaja - Exclusive Workouts</title>
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							mulish: ["Mulish", "sans-serif"],
+						},
+						colors: {
+							"teal-custom": "#8dc3b9",
+						},
+					},
+				},
+			};
+		</script>
 	</head>
 
-	<body>
-		<div class="page">
-			<nav>
-				<a href="#" id="logo" href="#">
-					<img src="./images/logo.svg" alt="workoutaja logo" />
+	<body
+		class="font-mulish text-gray-900 min-h-screen overflow-x-hidden relative"
+	>
+		<div class="max-w-7xl mx-auto">
+			<!-- Navigation -->
+			<nav class="flex items-center justify-between py-8 px-6 md:px-20">
+				<a href="#" id="logo" class="text-teal-400 text-2xl font-bold">
+					workoutaja
 				</a>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Training</a></li>
+				<ul class="flex gap-8">
+					<li><a href="#" class="font-bold">Home</a></li>
+					<li>
+						<a
+							href="#"
+							class="text-gray-500 hover:text-gray-900 transition-colors font-medium hover:font-bold"
+							>About</a
+						>
+					</li>
+					<li>
+						<a
+							href="#"
+							class="text-gray-500 hover:text-gray-900 transition-colors font-medium hover:font-bold"
+							>Training</a
+						>
+					</li>
 				</ul>
 			</nav>
 
-			<main>
-				<section class="text">
-					<h1>
+			<!-- Main Content -->
+			<main
+				class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-10"
+			>
+				<section class="w-full md:w-1/2 mb-10 md:mb-0">
+					<h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
 						WORKOUTS MADE <br />
-						<span>EXCLUSIVE</span> FOR YOU!
+						<span class="text-teal-400">EXCLUSIVE</span> FOR YOU!
 					</h1>
-					<p>
-						We create <strong>exclusive and unique</strong> workouts for you.
-						<br />
-						Invest in your body and get <strong>much more performance</strong
-						><br />and quality of life.
+					<p class="text-lg text-gray-600 mb-8 leading-relaxed">
+						We create
+						<strong class="text-gray-900">exclusive and unique workouts</strong>
+						for you.<br />
+						Invest in your body and
+						<strong class="text-gray-900">get much more performance</strong
+						><br />
+						and quality of life.
 					</p>
-					<button alt="go to whatsapp">
+					<button
+						class="bg-teal-400 text-white py-3 px-6 rounded-md flex items-center gap-2 hover:bg-teal-500 transition-colors"
+					>
 						<img src="./images/whatsapp-icon.svg" alt="whatsapp icon" />
 						Start now
 					</button>
 				</section>
 				<img
 					src="./images/woman.svg"
-					alt="illustration of a woman doing workout on a gym"
+					alt="Illustration of a woman doing workout in a gym"
+					class="w-full md:w-2/5 max-w-md"
 				/>
 			</main>
 
-			<footer>send us a message <a href="mailto:#">@workoutaja</a></footer>
+			<!-- Footer -->
+			<footer class="text-center text-gray-600 py-6">
+				send us a message
+				<a href="mailto:#" class="text-gray-900 font-bold">@workoutaja</a>
+			</footer>
 		</div>
+
+		<!-- Decorative elements -->
 		<img
 			id="balls"
 			src="./images/balls.svg"
-			alt="decorative balls on the bottom left os the page"
+			alt="Decorative balls on the bottom left of the page"
+			class="absolute bottom-0 right-0 -z-10 w-32 md:w-auto"
 		/>
 	</body>
 </html>
